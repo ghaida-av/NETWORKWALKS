@@ -1,70 +1,15 @@
-                                                                                                                                           
 ┌──(yda㉿kali)-[~/Downloads]
 └─$ nano crack_pdf.py
                                                                                                                                            
 ┌──(yda㉿kali)-[~/Downloads]
-└─$ python3 crack_pdf.py patient_report_1.pdf /usr/share/wordlists/rockyou.txt
-[+] PASSWORD FOUND: 123456
-Traceback (most recent call last):
-  File "/home/yda/Downloads/crack_pdf.py", line 13, in <module>
-    sys.exit(0)
-    ~~~~~~~~^^^
-SystemExit: 0
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/yda/Downloads/crack_pdf.py", line 14, in <module>
-    except pikepdf._qpdf.PasswordError:
-           ^^^^^^^^^^^^^
-  File "/home/yda/.local/lib/python3.14/site-packages/pikepdf/__init__.py", line 306, in __getattr__
-    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
-AttributeError: module 'pikepdf' has no attribute '_qpdf'
+└─$ python3 crack_pdf.py patient_report_3.pdf /usr/share/wordlists/rockyou.txt
+[+] PASSWORD FOUND: !@#$%^&
                                                                                                                                            
 ┌──(yda㉿kali)-[~/Downloads]
 └─$ python3 crack_pdf.py patient_report_2.pdf /usr/share/wordlists/rockyou.txt
-Traceback (most recent call last):
-  File "/home/yda/Downloads/crack_pdf.py", line 11, in <module>
-    with pikepdf.open(pdf_file, password=password):
-         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/yda/.local/lib/python3.14/site-packages/pikepdf/_methods.py", line 609, in open
-    pdf = Pdf._open(
-        stream,
-    ...<9 lines>...
-        conversion_mode=conversion_mode,
-    )
-pikepdf._core.PasswordError: patient_report_2.pdf: invalid password
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/yda/Downloads/crack_pdf.py", line 14, in <module>
-    except pikepdf._qpdf.PasswordError:
-           ^^^^^^^^^^^^^
-  File "/home/yda/.local/lib/python3.14/site-packages/pikepdf/__init__.py", line 306, in __getattr__
-    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
-AttributeError: module 'pikepdf' has no attribute '_qpdf'
+[+] PASSWORD FOUND: password
                                                                                                                                            
 ┌──(yda㉿kali)-[~/Downloads]
-└─$ python3 crack_pdf.py patient_report_3.pdf /usr/share/wordlists/rockyou.txt
-Traceback (most recent call last):
-  File "/home/yda/Downloads/crack_pdf.py", line 11, in <module>
-    with pikepdf.open(pdf_file, password=password):
-         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/yda/.local/lib/python3.14/site-packages/pikepdf/_methods.py", line 609, in open
-    pdf = Pdf._open(
-        stream,
-    ...<9 lines>...
-        conversion_mode=conversion_mode,
-    )
-pikepdf._core.PasswordError: patient_report_3.pdf: invalid password
+└─$ python3 crack_pdf.py patient_report_1.pdf /usr/share/wordlists/rockyou.txt
+[+] PASSWORD FOUND: 123456
 
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/yda/Downloads/crack_pdf.py", line 14, in <module>
-    except pikepdf._qpdf.PasswordError:
-           ^^^^^^^^^^^^^
-  File "/home/yda/.local/lib/python3.14/site-packages/pikepdf/__init__.py", line 306, in __getattr__
-    raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
-AttributeError: module 'pikepdf' has no attribute '_qpdf'
