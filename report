@@ -1,25 +1,13 @@
-
-(yda㉿kali)-[~/Downloads]
-└─$ john --list=formats | grep -i pdf      
-414 formats (149 dynamic formats shown as just "dynamic_n" here)
-PBKDF2-HMAC-SHA256, PBKDF2-HMAC-SHA512, PDF, PEM, pfx, pgpdisk, pgpsda, 
-                                                                                                                                           
 ┌──(yda㉿kali)-[~/Downloads]
-└─$ hashcat -m 10500 -a 0 report1.hash /usr/share/wordlists/rockyou.txt
+└─$ hashcat -m 10500 -a 0 report1_clean.hash /usr/share/wordlists/rockyou.txt --force -D 1
 hashcat (v7.1.2) starting
+
+You have enabled --force to bypass dangerous warnings and errors!
+This can hide serious problems and should only be done when debugging.
+Do not report hashcat issues encountered when using --force.
 
 No devices found/left.
 
-Started: Fri Oct  2 23:00:37 2026
-Stopped: Fri Oct  2 23:00:37 2026
-                                                                                                                                           
-┌──(yda㉿kali)-[~/Downloads]
-└─$ hashcat -m 10500 report1.hash --show                               
-Hashfile 'report1.hash' on line 1 (patien...c5ba427b1b9102da468e77127f1e69d6): Token length exception
+Started: Fri Oct  2 23:08:51 2026
+Stopped: Fri Oct  2 23:08:51 2026
 
-* Token length exception: 1/1 hashes
-  This error happens if the wrong hash type is specified, if the hashes are
-  malformed, or if input is otherwise not as expected (for example, if the
-  --username or --dynamic-x option is used but no username or dynamic-tag is present)
-
-No hashes loaded.
