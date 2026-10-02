@@ -1,20 +1,25 @@
-cat > custom.txt << 'EOF'
-Dlamini2024
-Reddy2024
-Thompson2024
-LR-2024-1187
-LR-2024-1192
-LR-2024-1205
-LR20241187
-LR20241192
-LR20241205
-20241104
-20241105
-20241106
-04112024
-05112024
-06112024
-mediroza2024
-mediroza123
-Mediroza2024
-EOF
+
+(yda㉿kali)-[~/Downloads]
+└─$ john --list=formats | grep -i pdf      
+414 formats (149 dynamic formats shown as just "dynamic_n" here)
+PBKDF2-HMAC-SHA256, PBKDF2-HMAC-SHA512, PDF, PEM, pfx, pgpdisk, pgpsda, 
+                                                                                                                                           
+┌──(yda㉿kali)-[~/Downloads]
+└─$ hashcat -m 10500 -a 0 report1.hash /usr/share/wordlists/rockyou.txt
+hashcat (v7.1.2) starting
+
+No devices found/left.
+
+Started: Fri Oct  2 23:00:37 2026
+Stopped: Fri Oct  2 23:00:37 2026
+                                                                                                                                           
+┌──(yda㉿kali)-[~/Downloads]
+└─$ hashcat -m 10500 report1.hash --show                               
+Hashfile 'report1.hash' on line 1 (patien...c5ba427b1b9102da468e77127f1e69d6): Token length exception
+
+* Token length exception: 1/1 hashes
+  This error happens if the wrong hash type is specified, if the hashes are
+  malformed, or if input is otherwise not as expected (for example, if the
+  --username or --dynamic-x option is used but no username or dynamic-tag is present)
+
+No hashes loaded.
